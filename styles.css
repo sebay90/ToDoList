@@ -1,0 +1,34 @@
+input{
+    padding: 5px;
+}
+
+.add-btn-block{
+    margin-bottom: 20px;
+}
+
+.add-btn-block input{
+    width: calc(100% - 55px)
+}
+
+.todolist-block .todolist-item{
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.todolist-item .edit-name{
+    margin-left: -4px;
+    width: calc(100% - 62px);
+}
+
+.todolist-item .name{
+    width: calc(100% - 125px);
+}
+
+.todolist-item .edit-name input{
+    width: 100%;
+}
+
+.todolist-item > div{
+    display: inline-block;
+}

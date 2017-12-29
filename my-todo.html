@@ -1,0 +1,26 @@
+<div class="todolist-wrapper">
+    <h1>Best To Do List Ever</h1>
+    <div class="add-btn-block">
+        <button ng-click="vm.addTodo()" class="btn add-todo-btn">Add</button>
+        <input type="text" ng-model="vm.todoname" placeholder="Add your to do item"/>
+        <div>{{vm.todoname}}</div>
+    </div>
+    <div class="todolist-block">
+        <div class="todolist-item" ng-repeat="item in vm.todo track by item.id">
+            <div class="edit-btn">
+                <button ng-click="vm.edit($index)" class="btn" ng-show="!item.edit">Edit</button>
+            </div>
+            <div class="name" ng-show="!item.edit">
+                {{item.name}}
+            </div>
+            <div class="edit-name" ng-show="item.edit">
+                <input ng-model="item.name" />
+            </div>
+            <div class="delete-btn">
+                <button ng-click="vm.delete($index)" class="btn" ng-show="!item.edit">Delete</button>
+                <button ng-click="vm.save($index)" class="btn" ng-show="item.edit">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
